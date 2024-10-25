@@ -1,5 +1,4 @@
 import { ShopItemType } from "@/app/page"
-import Image from "next/image"
 
 
 

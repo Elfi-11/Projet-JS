@@ -4,7 +4,7 @@ import CookieImg from '@/assets/cookie.png'
 interface Props {
     totalCookies: number,
     cps: number,
-    onCookieClick: Function
+    onCookieClick: () => void
 }
 
 export const CookieZone = ({totalCookies, onCookieClick, cps=0}:Props) => {
