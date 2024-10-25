@@ -11,7 +11,7 @@ export interface ShopItemType {
   label: string,
   price: number,
   cps: number, //Cookies per second
-  total: number
+  total: number,
 }
 
 
@@ -60,7 +60,7 @@ export default function Home() {
         <CookieZone totalCookies={cookies} cps={cookiesPerSecond} onCookieClick={() => { setCookies(cookies + 1) }} />
       </div>
       <div className="center flex-1 bg-red-500">
-        {purchasedItems.filter(o => o.total > 0).map(item => <PurshasedItem item={item}/>)}
+        {purchasedItems.filter(o => o.total > 0).map(item => <PurshasedItem key={item.id} item={item} />)}
       </div>
       <div className="right w-1/4 flex flex-col gap-3 p-2">
       {purchasedItems.map(item =>
